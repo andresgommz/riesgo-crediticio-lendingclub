@@ -34,7 +34,8 @@ else:
         int_rate = st.number_input("Tasa de interés (int_rate, %)", min_value=5.0, max_value=31.0, value=float(round(tasas.get(sub_grade, 13.0), 2)))
         annual_inc = st.number_input("Ingreso anual (annual_inc, USD)", min_value=0.0, max_value=1000000.0, value=65000.0, step=1000.0)
         emp_length = st.selectbox("Antigüedad laboral (emp_length)", ['< 1 year', '1 year', '2 years', '3 years', '4 years', '5 years', '6 years', '7 years', '8 years', '9 years', '10+ years'], index=10)
-        home_ownership = st.selectbox("Vivienda (home_ownership)", ['MORTGAGE', 'RENT', 'OWN', 'OTHER'])
+        # OTHER se excluye: solo tiene 7 casos en los datos y su coeficiente escalado no es confiable
+        home_ownership = st.selectbox("Vivienda (home_ownership)", ['MORTGAGE', 'RENT', 'OWN'])
         verification_status = st.selectbox("Verificación de ingreso (verification_status)", ['Not Verified', 'Source Verified', 'Verified'])
     with col2:
         purpose = st.selectbox("Propósito (purpose)", model.artefactos['purpose_opciones'])

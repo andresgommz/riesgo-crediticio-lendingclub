@@ -4,6 +4,12 @@ Proyecto integrador de Inteligencia Artificial, Ingeniería de Sistemas, UNAB.
 Integrantes: Andrés Gómez y Rodolfo Hernández.
 Profesor: Ph.D. Andrés Felipe Jerez Ariza.
 
+## Enlaces
+
+- Aplicación en Streamlit: https://riesgo-crediticio-lendingclub.streamlit.app
+- Notebook en Google Colab: https://drive.google.com/file/d/1cQPE1zeIqeSKwu6wxwsXp9pMm34SCheg/view?usp=sharing
+- Repositorio: https://github.com/andresgommz/riesgo-crediticio-lendingclub
+
 ## Problema
 
 Con la información disponible al originar un préstamo peer-to-peer de LendingClub, ¿es posible anticipar si terminará pagado (Fully Paid) o incumplido (Charged Off)?
