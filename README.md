@@ -33,6 +33,8 @@ El modelo detecta el 59% de los préstamos que terminan en default. Entre los pr
 
 ## Ejecutar localmente
 
+Requiere **Python 3.13** (probado con 3.13.7 y 3.13.17). Con Python 3.14 la instalación falla, porque numpy 2.2.6 y scikit-learn 1.6.1 no tienen versiones para esa versión.
+
 ```
 python -m venv .venv
 .venv\Scripts\Activate.ps1
