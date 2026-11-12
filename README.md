@@ -39,7 +39,7 @@ El modelo detecta el 59% de los préstamos que terminan en default. Entre los pr
 
 ## Ejecutar localmente
 
-Requiere **Python 3.13** (probado con 3.13.7 y 3.13.17). Con Python 3.14 la instalación falla, porque numpy 2.2.6 y scikit-learn 1.6.1 no tienen versiones para esa versión.
+Requiere **Python 3.13** (probado con 3.13.7, 3.13.17 y 3.13.18). Con Python 3.14 la instalación falla, porque scikit-learn 1.6.1 y pandas 2.2.3 no tienen versiones para esa versión.
 
 ```
 python -m venv .venv
@@ -52,4 +52,4 @@ La aplicación abre en http://localhost:8501.
 
 ## Nota sobre versiones
 
-`modelo_riesgo.joblib` se generó con scikit-learn 1.6.1, pandas 2.3.3 y numpy 2.2.6, que son las versiones fijadas en `requirements.txt`. Si se vuelve a generar el archivo desde Colab, la última celda del notebook imprime las versiones usadas, y `requirements.txt` se debe actualizar con esas mismas versiones.
+`requirements.txt` fija las mismas versiones que imprime la última celda del notebook en Colab: scikit-learn 1.6.1, pandas 2.2.3, numpy 2.4.6 y joblib 1.6.0. Se verificó que con estas versiones `modelo_riesgo.joblib` carga sin advertencias y reproduce en los 3,453 préstamos de prueba la misma matriz de confusión y el mismo AUC (0.6816) del notebook. Si se vuelve a ejecutar el notebook en Colab, hay que actualizar `requirements.txt` con las versiones que imprima esa celda.
